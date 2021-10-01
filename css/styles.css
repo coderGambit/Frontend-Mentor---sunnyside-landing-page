@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap');
+
+*, *::before, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    --clr-soft-red: hsl(7, 99%, 70%);
+    --clr-yellow: hsl(51, 100%,49%);
+    --clr-graphic-design-text: hsl(167, 40%, 24%);
+    --clr-photography-text: hsl(198, 62%, 26%);
+    --clr-footer: hsl(198, 34%, 41%);
+    --clr-header: hsl(200, 100%, 62%);
+    --clr-very-saturated-blue: hsl(212, 27%, 19%);
+    --clr-very-dark-grayish-blue: hsl(212, 27%, 19%);
+    --clr-dark-grayish-blue: hsl(232, 10%, 55%);
+    --clr-grayish-blue: hsl(210, 4%, 67%);
+    font-size: 18px;
+    font-family: Barlow, sans-serif;
+}
+
+.topBar{
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: white;
+    background-color: var(--clr-header);
+    padding: 30px 30px;
+    gap: 30px;
+}
+
+.logo{
+    margin-right: auto;
+}
+
+.links{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    transition: transform .3s ease-in-out;
+}
+
+.menuLink{
+    color: white;
+    text-decoration: none;
+}
+
+.contactButton{
+    border: none;
+    font-family: Fraunces, sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 100px;
+    padding: 15px 25px;
+}
+
+.hamburgerMenuButton{
+    position: absolute;
+    right: 0;
+    margin-right: 30px;
+    display: none;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 720px) {
+
+    .topBarMobile{
+        /* 2rem is default size of h1 header, 60px is the addition
+         of the top and bottom padding */
+        max-height: calc(2rem + 60px);
+    }
+
+
+    .links{
+        padding: 30px 0;
+        position: absolute;
+        right: 30px;
+        flex-direction: column;
+        top: calc(100% + 25px);/* 25px is the height of the before pseudo element */
+        background-color: white;
+        width: calc(100% - 60px);
+        transform-origin: right top;
+        transform: scale(0);
+    }
+
+    .menuOpened{
+        transform: scale(1);
+    }
+
+    .links::before{
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        border-left: 20px solid transparent;
+        border-bottom: 25px solid white;
+        position: absolute;
+        top: -25px;
+        right: 0;
+    }
+
+    .menuLink{
+        color: var(--clr-very-saturated-blue);
+    }
+
+    .contactButton{
+        background-color: var(--clr-yellow);
+    }
+
+    .hamburgerMenuButton{
+        display: inline;
+        cursor: pointer;
+    }
+}
