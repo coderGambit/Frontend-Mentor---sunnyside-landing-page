@@ -15,7 +15,7 @@
 		<header id="menuBar" class="topBar topBarMobile">
 
 
-			<h2 class="logo">sunnyside</h2>
+			<img class="logo" src="images/logo.svg" alt="logo">
 			<section id="links" class="links">
 				<a class="menuLink" href="javascript:void(0)">About</a>
 				<a class="menuLink" href="javascript:void(0)">Services</a>
@@ -28,30 +28,88 @@
 
 		<section class="heroSection">
 
-			<h1>We are creatives</h1>
-			<img src="images/icon-arrow-down.svg" alt="arrow">
+			<h1 class="heroHeading">We are creatives</h1>
+			<img class="heroArrow" src="images/icon-arrow-down.svg" alt="arrow">
+
+			<picture class="heroImage">
+				<source media="(max-width: 560px)" srcset="images/mobile/image-header.jpg">
+				<img class="heroImage" src="images/desktop/image-header.jpg" alt="hero image">
+			</picture>
+
 
 		</section>
 
-		Transform your brand
+		<section class="mainGrid">
 
-		We are a full-service creative agency specializing in helping brands grow fast.
-		Engage your clients through compelling visuals that do most of the marketing for you.
+			<div class="infoCard">
 
-		Learn more
+				<h2>Transform your brand</h2>
+				<p>
+					We are a full-service creative agency specializing in helping brands grow fast.
+					Engage your clients through compelling visuals that do most of the marketing for you.
+				</p>
+				<a href="javascript:;">Learn more</a>
 
-		Stand out to the right audience
+			</div>
 
-		Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital
-		places.
+			<picture class="gridImage">
+				<source media="(max-width: 720px)" srcset="images/mobile/image-transform.jpg">
+				<img src="images/desktop/image-transform.jpg" alt="egg image">
+			</picture>
 
-		Learn more
+			<picture class="gridImage">
+				<source media="(max-width: 720px)" srcset="images/desktop/image-stand-out.jpg">
+				<img src="images/desktop/image-stand-out.jpg" alt="chalice image">
+			</picture>
 
-		Graphic design
-		Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.
+			<div class="infoCard">
 
-		Photography
-		Increase your credibility by getting the most stunning, high-quality photos that improve your business image.
+				<h2>Stand out to the right audience</h2>
+				<p>
+					Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.
+				</p>
+				<a href="javascript:;">Learn more</a>
+
+			</div>
+
+			<div class="graphicDesignCard">
+
+				<picture class="graphicDesignImage gridImage">
+					<source media="(max-width: 720px)" srcset="images/mobile/image-graphic-design.jpg">
+					<img src="images/desktop/image-graphic-design.jpg" alt="cherry image">
+				</picture>
+
+				<section class="imageDetails graphicDesignImageDetails">
+
+					<h3>Graphic design</h3>
+					<p>
+						Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.
+					</p>
+
+				</section>
+
+			</div>
+
+			<div class="photographyCard">
+
+				<picture class="photographyImage gridImage">
+					<source media="(max-width: 720px)" srcset="images/mobile/image-photography.jpg">
+					<img src="images/desktop/image-photography.jpg" alt="orange image">
+				</picture>
+
+				<section class="imageDetails photographyImageDetails">
+
+					<h3>Photography</h3>
+					<p>
+						Increase your credibility by getting the most stunning, high-quality photos that improve your business image.
+					</p>
+
+				</section>
+
+			</div>
+
+		</section>
+
 
 		Client testimonials
 

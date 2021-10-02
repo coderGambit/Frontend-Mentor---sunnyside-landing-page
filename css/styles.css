@@ -19,6 +19,17 @@ body{
     --clr-grayish-blue: hsl(210, 4%, 67%);
     font-size: 18px;
     font-family: Barlow, sans-serif;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+p{
+    color: var(--clr-dark-grayish-blue);
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-weight: 900;
+    font-family: Fraunces, sans-serif;
 }
 
 .topBar{
@@ -33,13 +44,13 @@ body{
 
 .logo{
     margin-right: auto;
+    font-weight: 800;
 }
 
 .links{
     display: flex;
     gap: 30px;
     align-items: center;
-    transition: transform .3s ease-in-out;
 }
 
 .menuLink{
@@ -63,6 +74,96 @@ body{
     display: none;
 }
 
+.heroSection{
+    display: grid;
+}
+
+.heroHeading{
+    z-index: 1;
+    justify-self: center;
+    align-self: center;
+    font-family: Fraunces, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: white;
+    margin: 30px 30px 250px 30px;
+    letter-spacing: 5px;
+}
+
+.heroArrow{
+    z-index: 1;
+    align-self: center;
+    justify-self: center;
+}
+
+.heroSection > *{
+    grid-area: 1/1/1/1;
+}
+
+.heroImage{
+    width: 100%;
+}
+
+.mainGrid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(375px, 720px));
+    grid-auto-rows: 600px;
+    justify-content: center;
+}
+
+.infoCard{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 150px;
+    background-color: whitesmoke;
+    justify-content: center;
+}
+
+.infoCard > p{
+    line-height: 1.5;
+}
+
+.infoCard > a{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 900;
+    color: var(--clr-very-dark-grayish-blue);
+    font-family: Fraunces, sans-serif;
+}
+
+.imageDetails{
+    display: flex;
+    flex-direction: column;
+    max-width: 375px;
+    min-width: 350px;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.imageDetails > p{
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.graphicDesignCard, .photographyCard{
+    position: relative;
+}
+
+.graphicDesignImageDetails, .graphicDesignImageDetails > p{
+    color: var(--clr-graphic-design-text);
+}
+
+.photographyImageDetails, .photographyImageDetails > p{
+    color: var(--clr-photography-text);
+}
+
 .attribution {
     font-size: 11px;
     text-align: center;
@@ -80,7 +181,6 @@ body{
         max-height: calc(2rem + 60px);
     }
 
-
     .links{
         padding: 30px 0;
         position: absolute;
@@ -91,6 +191,7 @@ body{
         width: calc(100% - 60px);
         transform-origin: right top;
         transform: scale(0);
+        transition: transform .3s ease-in-out;
     }
 
     .menuOpened{
@@ -120,5 +221,42 @@ body{
     .hamburgerMenuButton{
         display: inline;
         cursor: pointer;
+    }
+
+    .heroSection{
+        background: url("../images/mobile/image-header.jpg");
+    }
+
+    .mainGrid{
+        grid-auto-rows: auto;
+    }
+
+    .gridImage{
+        width: 100%;
+    }
+
+    .gridImage > img{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+
+    .heroHeading{
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 350px;
+    }
+
+    .infoCard{
+        padding: 75px 30px;
+    }
+
+    .infoCard > h2{
+        font-size: 2rem;
+    }
+
+    .infoCard > *{
+        text-align: center;
     }
 }
