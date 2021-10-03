@@ -164,6 +164,50 @@ h1, h2, h3, h4, h5, h6{
     color: var(--clr-photography-text);
 }
 
+.testimonials{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+    padding: 150px;
+}
+
+.testimonialsHeading{
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    color: var(--clr-grayish-blue);
+}
+
+.testimonialContainer{
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.testimonialCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 350px;
+    gap: 50px;
+}
+
+.profileImage{
+    border-radius: 50%;
+    width: 70px;
+}
+
+.testimonial{
+    text-align: center;
+    line-height: 1.5;
+}
+
+.profession{
+    color: var(--clr-grayish-blue);
+    margin-top: -40px;
+}
+
 .attribution {
     font-size: 11px;
     text-align: center;
