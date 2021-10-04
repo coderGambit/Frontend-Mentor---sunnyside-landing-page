@@ -360,6 +360,11 @@ footer{
         background-color: var(--clr-yellow-active);
     }
 
+    .contactButton:hover{
+        background-color: var(--clr-yellow);
+        color: black;
+    }
+
     .hamburgerMenuButton{
         display: inline;
         cursor: pointer;
